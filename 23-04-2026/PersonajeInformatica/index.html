@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexboxgrid con Python</title>
+    
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/flexboxgrid.min.css">
+
+    <link rel="icon" type="image/jpeg" href="imagenes/favicon-48x48.png">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <py-script>
+from pyscript import document
+
+def muestra_py(event):
+    # Obtenemos el ID de la capa desde el atributo "data-id" del enlace
+    capa_id = event.target.getAttribute("data-id")
+    
+    # Buscamos todas las capas de artículos
+    capas = document.querySelectorAll(".articulo")
+    
+    # Ocultamos todas
+    for capa in capas:
+        capa.className = "articulo oculto"
+    
+    # Mostramos la que corresponde
+    elemento = document.getElementById(capa_id)
+    if elemento:
+        elemento.className = "articulo visible"
+    </py-script>
+    <style>
+        .oculto { display: none; }
+        .visible { display: block; }
+        .nav h3 { font-size: 1.2em; margin-top: 15px; border-bottom: 1px solid #ccc; }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <header class="row">
+        <div class="col-xs-12">
+            <div class="header">
+                <h2>Informáticos Famosos</h2>
+            </div>
+        </div>
+    </header>
+
+    <section class="row">
+        <div class="col-xs-12 col-md-3">
+            <nav class="nav">
+                <h3>Kevin Systrom</h3>
+                <ul>
+                    <li><a py-click="muestra_py" data-id="p1_datos">Datos personales</a></li>
+                    <li><a py-click="muestra_py" data-id="p1_proy">Proyectos</a></li>
+                    <li><a py-click="muestra_py" data-id="p1_curio">curiosidades</a></li>
+                </ul>
+                <h3>Mike Krieger</h3>
+                <ul>
+                    <li><a py-click="muestra_py" data-id="p2_datos">Datos personales</a></li>
+                    <li><a py-click="muestra_py" data-id="p2_proy">Proyectos</a></li>
+                    <li><a py-click="muestra_py" data-id="p2_curio">curiosidades</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="col-xs-12 col-md-9">
+            <article id="p1_datos" class="articulo visible" style="background-color: #ff00ff; padding: 20px;">
+              <img src="imagenes/kevin.jpg" class="foto-perfil" alt="mike" style="width: 125px; height: 125px; border-radius: 50%; object-fit: cover; object-position: center; float: right; margin-left: 20px;">              
+                <h1>Datos personales: Kevin</h1>
+                <ul>
+                   <li><p><strong>Origen y formación:</strong>Kevin York Systrom nació en Massachusetts en 1983. Se graduó en la Universidad de Stanford en Gestión de la Ciencia e Ingeniería, donde desarrolló su interés por la tecnología y la fotografía.</p></li>
+                   <li><p><strong>Perfil discreto:</strong> A pesar de ser multimillonario tras vender Instagram, mantiene un perfil bajo, es un gran aficionado al café artesanal y al ciclismo de alta competición.</p></li>
+                   <li><p><strong>Pasión por la fotogrfia:</strong>Durante un viaje de estudios a Florencia (Italia), un profesor le sugirió usar una cámara Holga barata para aprender a apreciar la estética de las fotos imperfectas, lo que inspiró los famosos filtros de Instagram.</p></li>
+                </ul>
+            </article>
+
+            <article id="p1_proy" class="articulo oculto" style="background-color: #ff00ff; padding: 20px;">
+                <h1>Proyectos: Kevin</h1>
+                <ul>
+                    <li><p><strong>Instagram:</strong> Cofundó la red social en 2010, enfocándose en la simplicidad y la velocidad para compartir fotos.</p></li>
+                    <li><p><strong>Artifact:</strong> Recientemente (2023) lanzó una aplicación de noticias impulsada por Inteligencia Artificial para personalizar el contenido informativo, aunque decidió cerrarla un año después.</p></li>
+                    <li><p><strong>Burbn:</strong> Fue su primer proyecto serio, una aplicación de "check-in" similar a Foursquare que resultó ser demasiado complicada, pero que sirvió como base para crear Instagram.</p></li>
+                </ul>
+              </article>
+
+            <article id="p1_curio" class="articulo oculto" style="background-color: #ff00ff; padding: 20px;">
+                <h1>curiosidades: Kevin</h1>
+                <ul>
+                   <li><p><strong>Venta relámpago:</strong> Negoció la venta de Instagram a Mark Zuckerberg (Facebook) en solo 48 horas por 1.000 millones de dólares.</p></li>
+                   <li><p><strong>Prácticas en Twitter:</strong> Antes de ser rivales, trabajó como pasante en Odeo, la empresa que terminó convirtiéndose en Twitter.</p></li>
+                   <li><p><strong>La primera foto:</strong> La primera imagen subida a Instagram no fue de él, sino de un perro callejero en México y el pie de su novia, titulada simplemente "Test".</p></li>
+                </ul>
+            </article>
+
+            <article id="p2_datos" class="articulo oculto" style="background-color: #007bff; padding: 20px; color: white;">
+              <img src="imagenes/mike.jpg" class="foto-perfil" alt="mike" style="width: 125px; height: 125px; border-radius: 50%; object-fit: cover; object-position: center; float: right; margin-left: 20px;">                <h1>Datos personales: Personaje 2</h1>
+                <ul>
+                    <li><p><strong>Doble nacionalidad:</strong>Kevin York Systrom aunque vive en EE. UU. desde hace años, mantiene un fuerte vínculo con la comunidad tecnológica latinoamericana.</p></li>
+                    <li><p><strong>Filantropía:</strong> Junto a su esposa, Kaitlyn Trigger, fundó "Future Perfect Ventures", enfocándose en donar grandes sumas de dinero a organizaciones que luchan contra el cambio climático y la pobreza.</p></li>
+                    <li><p><strong>Raíces brasileñas:</strong> Nació en São Paulo, Brasil, en 1986. Se mudó a Estados Unidos para estudiar en Stanford, donde conoció a Systrom.</p></li>
+                </ul>
+            </article>
+
+            <article id="p2_proy" class="articulo oculto" style="background-color: #007bff; padding: 20px; color: white;">
+              <h1>Proyectos: Personaje 2</h1>
+              <ul>
+                  <li><p><strong>RT.live:</strong> Durante la pandemia, lanzó junto a Systrom un sitio web para rastrear la tasa de contagio (Rt) del COVID-19 en tiempo real en cada estado de EE. UU.</p></li>
+                  <li><p><strong>Meebo:</strong> Antes de Instagram, trabajó en Meebo (una plataforma de mensajería instantánea) como diseñador e ingeniero de experiencia de usuario.</p></li>
+                  <li><p><strong>Ingeniería de Instagram:</strong> Mientras Kevin se centraba en el producto y diseño, Mike fue el cerebro técnico que permitió que la aplicación soportara millones de usuarios sin colapsar.</p></li>
+              </ul>
+            </article>
+
+            <article id="p2_curio" class="articulo oculto" style="background-color: #007bff; padding: 20px; color: white;">
+              <h1>Proyectos: Personaje 2</h1>
+                <ul>
+                   <li><p><strong>El primer código:</strong> Mike escribió la primera línea de código de la versión de Instagram para iPhone en una sola noche de trabajo intensivo.</p></li>
+                   <li><p><strong>Amante de la música:</strong> Toca la guitarra y es conocido por integrar su pasión por el arte en la interfaz visual de los proyectos que desarrolla.</p></li>
+                   <li><p><strong>El nombre "Instagram":</strong> A Mike y Kevin se les ocurrió el nombre combinando las palabras "Instant" (instante) y "Telegram" (telegrama)..</p></li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <footer class="row">
+        <div class="col-xs-12">
+            <div class="footer">
+                <p>Footer</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
