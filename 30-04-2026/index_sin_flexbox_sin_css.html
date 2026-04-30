@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>FlexBox Bigote</title>
+    <link href="css/flexboxgrid.min.css" rel="stylesheet">
+    <link href="css/style_index.css" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="imagenes/favicon-48x48.png">
+
+    <!-- insertar los estilos -->
+
+  <script type="text/javascript">
+      function muestra(capa) {
+      var capas = document.getElementsByTagName("div")
+      for(var i=0; i<capas.length; i++) {
+        if(capas[i].className == "articulo visible")
+         capas[i].className = "articulo oculto";
+        }
+       var elemento = document.getElementById(capa);
+      elemento.className = "articulo visible";
+}
+</script>
+
+  <!--Insertar aquí el código javascript de la práctica 2--> 
+
+</head>
+<body>
+    <div class="container">
+        <header class="row">
+            <div class="col-xs-12 col-sm-4">
+                 <div class="logo">
+                     <h1>Logo_Empresa</h1>
+                 </div>
+            </div>
+            <div class="col-xs-12 col-sm-8">
+                <nav>
+                    <ul>
+                        <a href=""><li>menu 1</li></a>
+                        <a href=""><li>menu 2</li></a>
+                        <a href=""><li>menu 3</li></a>
+                        <a href=""><li>menu 4</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    <!--                FINAL HEADER          -->
+    
+    
+    <!--                SECTION TIENE ARTICLE Y ASIDE               -->
+    <section class="row">
+            <div class="col-xs-12 col-sm-9 last-xs first-sm">
+                <article>
+                    <div id="artil1" class= "articulo visible">
+                        <h1>Artículo 1</h1>
+                          <!-- incluir la imagen aquí-->
+                          <img src="imagenes/bigote.png" alt="">
+                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae laboriosam nostrum unde ab molestias, ipsa doloribus eius, quo sint ad eaque quaerat temporibus nobis laborum quod necessitatibus praesentium illum sit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minima quisquam quam ipsa. Praesentium vero animi distinctio recusandae, maxime eaque, quo eum laboriosam, sapiente iste autem quod dolorem obcaecati explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vel quasi ipsa voluptatum blanditiis provident natus architecto in, earum optio? Architecto beatae aliquam quia reprehenderit eius totam, qui cupiditate neque? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum quod soluta corporis porro, magni sapiente optio aliquam suscipit quia perferendis illum. Sunt quae vel excepturi veritatis ex voluptatum neque laborum.<br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vitae optio deleniti hic error vero unde rerum, dolorum adipisci in odio, ducimus dolorem harum fugit incidunt ex earum fugiat veritatis?</p>
+                          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, voluptatum! Cumque ratione esse nam laborum inventore officia, ipsam repudiandae, fugit commodi earum dolor enim repellat deleniti, pariatur neque est quos.</p>
+                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis nihil iste et ipsum reprehenderit animi exercitationem hic cumque. Autem, eaque? Consequatur assumenda dignissimos neque consequuntur, blanditiis nisi! Cumque, at illum!</p>        
+                  </div>
+                
+                  <div id=artil2 class="articulo oculto">
+                        <h1>Artículo 2</h1>
+                        <!-- incluir la imagen aquí-->
+                        <img src="imagenes/bigote.png" alt="">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae laboriosam nostrum unde ab molestias, ipsa doloribus eius, quo sint ad eaque quaerat temporibus nobis laborum quod necessitatibus praesentium illum sit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minima quisquam quam ipsa. Praesentium vero animi distinctio recusandae, maxime eaque, quo eum laboriosam, sapiente iste autem quod dolorem obcaecati explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vel quasi ipsa voluptatum blanditiis provident natus architecto in, earum optio? Architecto beatae aliquam quia reprehenderit eius totam, qui cupiditate neque? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum quod soluta corporis porro, magni sapiente optio aliquam suscipit quia perferendis illum. Sunt quae vel excepturi veritatis ex voluptatum neque laborum.<br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vitae optio deleniti hic error vero unde rerum, dolorum adipisci in odio, ducimus dolorem harum fugit incidunt ex earum fugiat veritatis?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, voluptatum! Cumque ratione esse nam laborum inventore officia, ipsam repudiandae, fugit commodi earum dolor enim repellat deleniti, pariatur neque est quos.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis nihil iste et ipsum reprehenderit animi exercitationem hic cumque. Autem, eaque? Consequatur assumenda dignissimos neque consequuntur, blanditiis nisi! Cumque, at illum!</p>
+                </div>
+
+                <div id="artil3" class="articulo oculto">
+                    <h1>Artículo 3</h1>
+                    <!-- incluir la imagen aquí-->
+                     <img src="imagenes/bigote.png" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae laboriosam nostrum unde ab molestias, ipsa doloribus eius, quo sint ad eaque quaerat temporibus nobis laborum quod necessitatibus praesentium illum sit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minima quisquam quam ipsa. Praesentium vero animi distinctio recusandae, maxime eaque, quo eum laboriosam, sapiente iste autem quod dolorem obcaecati explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vel quasi ipsa voluptatum blanditiis provident natus architecto in, earum optio? Architecto beatae aliquam quia reprehenderit eius totam, qui cupiditate neque? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum quod soluta corporis porro, magni sapiente optio aliquam suscipit quia perferendis illum. Sunt quae vel excepturi veritatis ex voluptatum neque laborum.<br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vitae optio deleniti hic error vero unde rerum, dolorum adipisci in odio, ducimus dolorem harum fugit incidunt ex earum fugiat veritatis?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, voluptatum! Cumque ratione esse nam laborum inventore officia, ipsam repudiandae, fugit commodi earum dolor enim repellat deleniti, pariatur neque est quos.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis nihil iste et ipsum reprehenderit animi exercitationem hic cumque. Autem, eaque? Consequatur assumenda dignissimos neque consequuntur, blanditiis nisi! Cumque, at illum!</p>
+                </div>
+
+                <div id="artil4" class="articulo oculto">
+                    <h1>Artículo 4</h1>
+                    <!-- incluir la imagen aquí-->
+                     <img src="imagenes/bigote.png" alt="">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae laboriosam nostrum unde ab molestias, ipsa doloribus eius, quo sint ad eaque quaerat temporibus nobis laborum quod necessitatibus praesentium illum sit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minima quisquam quam ipsa. Praesentium vero animi distinctio recusandae, maxime eaque, quo eum laboriosam, sapiente iste autem quod dolorem obcaecati explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vel quasi ipsa voluptatum blanditiis provident natus architecto in, earum optio? Architecto beatae aliquam quia reprehenderit eius totam, qui cupiditate neque? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum quod soluta corporis porro, magni sapiente optio aliquam suscipit quia perferendis illum. Sunt quae vel excepturi veritatis ex voluptatum neque laborum.<br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat vitae optio deleniti hic error vero unde rerum, dolorum adipisci in odio, ducimus dolorem harum fugit incidunt ex earum fugiat veritatis?</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, voluptatum! Cumque ratione esse nam laborum inventore officia, ipsam repudiandae, fugit commodi earum dolor enim repellat deleniti, pariatur neque est quos.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis nihil iste et ipsum reprehenderit animi exercitationem hic cumque. Autem, eaque? Consequatur assumenda dignissimos neque consequuntur, blanditiis nisi! Cumque, at illum!</p>
+                </div>
+            </article> 
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <aside>
+                <h1>Artículos</h1>
+                <h2><a href="#" onclick="muestra('artil1')">Artículo 1</a></h2>
+                <h2><a href="#" onclick="muestra('artil2')">Artículo 2</a></h2>
+                <h2><a href="#" onclick="muestra('artil3')">Artículo 3</a></h2>
+                <h2><a href="#" onclick="muestra('artil4')">Artículo 4</a></h2>            
+            </aside>
+        </div>
+    </section>
+    <!--                FINAL SECTION         -->
+
+    <!--                FOOTER                  -->
+    <footer>
+            <div class="footer">
+                <h3>Página de ejemplo creada por: Juanma Martín  de 1ºGSI curso 2015-2026</h3>
+            </div> 
+    </footer>
+
+    <!--                FINAL FOOTER            -->
+    </div>
+</body>
+</html>
